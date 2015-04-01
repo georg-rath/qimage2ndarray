@@ -1,5 +1,7 @@
-
-from distutils.core import setup
+try:
+    from setuptools import setup, Extension
+except ImportError:
+    from distutils.core import setup, Extension
 
 for line in open("qimage2ndarray/__init__.py"):
     if line.startswith("__version__"):

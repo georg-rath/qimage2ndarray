@@ -1,7 +1,9 @@
-
 import os, numpy
 from os.path import join
-from distutils.core import setup, Extension
+try:
+    from setuptools import setup, Extension
+except ImportError:
+    from distutils.core import setup, Extension
 import sipdistutils
 
 
